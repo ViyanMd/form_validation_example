@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@100;200;300;400;500;600;700;800&display=swap");
+:root {
+  font-size: 62.5%;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  min-height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+body {
+  background-color: rgb(85, 128, 146);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1rem;
+  width: min(60rem, 100%);
+  min-height: 100%;
+  gap: 2rem;
+}
+
+.form__main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2.5rem;
+}
+
+.form__header {
+  font-family: "Noto Sans Display";
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 1.5rem 0;
+  border-top-left-radius: calc(1rem - 1px);
+  border-top-right-radius: calc(1rem - 1px);
+  border-bottom: 1px solid rgb(117, 117, 117);
+  background-color: rgb(204, 204, 204);
+}
+
+label, p.form__gender_header,
+p.form__hobbies_header {
+  font-family: "Noto Sans Display";
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: rgb(0, 187, 148);
+}
+
+input {
+  font-family: "Noto Sans Display";
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 3px;
+  outline-color: rgb(0, 187, 148);
+  padding: 0.5rem;
+}
+
+.form__name {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.form__name > * {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media screen and (max-width: 650px) {
+  .form__name {
+    flex-direction: column;
+  }
+}
+
+.form__email {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__password {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.form__password > * {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media screen and (max-width: 650px) {
+  .form__password {
+    flex-direction: column;
+  }
+}
+
+.form__gender-hobbies_cont {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.form__gender-hobbies_cont > * {
+  width: 100%;
+}
+.form__gender-hobbies_cont > * label {
+  margin-right: 0.5rem;
+}
+@media screen and (max-width: 650px) {
+  .form__gender-hobbies_cont {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .form__hobbies {
+    flex-direction: column;
+  }
+}
+
+.form__income {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.form__income > * {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media screen and (max-width: 650px) {
+  .form__income {
+    flex-direction: column;
+  }
+}
+
+.income__value {
+  font-family: "Noto Sans Display";
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  max-width: 3.5rem;
+  height: 2rem;
+  background-color: rgb(0, 187, 148);
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.income__range_value {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.income__range_value > * {
+  width: 100%;
+}
+
+input[type=range] {
+  padding: 0;
+}
+
+.form__picture-age_cont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+.form__picture-age_cont > * {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media screen and (max-width: 650px) {
+  .form__picture-age_cont {
+    flex-direction: column;
+  }
+}
+
+input[type=file] {
+  border: none;
+  padding: 0.5rem 0;
+}
+
+.form__bio {
+  display: flex;
+  flex-direction: column;
+}
+.form__bio textarea {
+  font-family: "Noto Sans Display";
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: rgb(0, 0, 0);
+  width: 100%;
+  height: 15ch;
+  resize: none;
+  outline-color: rgb(0, 187, 148);
+  padding: 0.5rem;
+}
+
+.form__submit {
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgb(204, 204, 204);
+  padding: 1.5rem 0;
+  border-bottom-left-radius: calc(1rem - 1px);
+  border-bottom-right-radius: calc(1rem - 1px);
+  border-top: 1px solid rgb(117, 117, 117);
+  padding: 1rem 3rem;
+}
+.form__submit button {
+  font-family: "Noto Sans Display";
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 187, 148);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.error {
+  border: 2px solid red;
+}
+
+/*# sourceMappingURL=main.css.map */

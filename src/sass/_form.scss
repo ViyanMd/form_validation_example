@@ -1,0 +1,185 @@
+.form {
+    @include flex(column);
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    width: min(60rem, 100%);
+    min-height: 100%;
+    gap: 2rem;
+}
+
+.form__main {
+    @include flex(column);
+    gap: 2rem;
+    padding: 2.5rem;
+
+}
+
+.form__header {
+    @include font(700, 1.4rem, rgb(255, 255, 255));
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top-left-radius: calc(1rem - 1px);
+    border-top-right-radius: calc(1rem - 1px);
+    border-bottom: 1px solid rgb(117, 117, 117);
+    background-color: $foreground_basic;
+}
+
+label, p.form__gender_header, 
+p.form__hobbies_header {
+    @include font(700, 1.4rem, $foreground_accent)
+}
+
+input {
+    @include font(500, 1.2rem, rgb(0,0,0));
+    border: 1px solid $foreground_basic;
+    border-radius: 3px;
+    outline-color: $foreground_accent;
+    padding: 0.5rem;
+}
+
+.form__name {
+    @include flex(row);
+    gap: 2rem;
+    & > * {
+        @include flex(column);
+        width: 100%;
+    }
+
+    @include tabletSmall {
+        flex-direction: column;
+    };
+}
+
+.form__email {
+    @include flex(column)
+}
+
+.form__password {
+    @include flex(row);
+    gap: 2rem;
+    & > * {
+        @include flex(column);
+        width: 100%;
+    }
+    @include tabletSmall {
+        flex-direction: column;
+    };
+}
+
+.form__gender-hobbies_cont {
+    @include flex(row);
+    gap: 2rem;
+    & > * {
+        width: 100%;
+        label {
+            margin-right: .5rem;
+        }
+    }
+
+    @include tabletSmall {
+        flex-direction: column;
+    };
+
+}
+
+.form__hobbies {
+    @include mobileSmall {
+        flex-direction: column;
+    };
+}
+
+.form__income {
+    @include flex(row);
+    gap: 2rem;
+    & > * {
+        @include flex(column);
+        width: 100%;
+    }
+
+    @include tabletSmall {
+        flex-direction: column;
+    };
+}
+
+.income__value {
+    @include font(700, 1.2rem, rgb(255,255,255));
+    max-width: 3.5rem;
+    height: 2rem;
+    background-color: $foreground_accent;
+    border-radius: .5rem;
+    text-align: center
+}
+
+.income__range_value {
+    @include flex(row);
+    gap:1rem;
+    & > * {
+        width: 100%;
+    }
+}
+
+
+input[type="range"] {
+    padding: 0;
+}
+
+.form__picture-age_cont {
+    @include flex(row);
+    align-items: center;
+    gap: 2rem;
+    & > * {
+        @include flex(column);
+        width: 100%;
+    }
+
+    @include tabletSmall {
+        flex-direction: column;
+    };
+}
+
+input[type="file"] {
+    border: none;
+    padding: 0.5rem 0;
+}
+
+.form__bio {
+    @include flex(column);
+    textarea {
+        @include font(500, 1.4rem, rgb(0,0,0));
+        width: 100%;
+        height: 15ch;
+        resize: none;
+        outline-color: $foreground_accent;
+        padding: 0.5rem;
+    }
+}
+
+.form__submit {
+    display: flex;
+    justify-content: flex-end;
+    background-color: $foreground_basic;
+    padding: 1.5rem 0;
+    border-bottom-left-radius: calc(1rem - 1px);
+    border-bottom-right-radius: calc(1rem - 1px);
+    border-top: 1px solid rgb(117, 117, 117);
+    padding: 1rem 3rem;
+    button {
+        @include font(700, 1.4rem, rgb(255, 255, 255));
+        background-color: $foreground_accent;
+        color:rgb(255, 255, 255);
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: .5rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+
+.error {
+    border: 2px solid red;
+}
+
+
+
+
+

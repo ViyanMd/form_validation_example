@@ -1,0 +1,23 @@
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin font($weight, $size, $color) {
+    font-family: $font__main;
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin tabletSmall {
+    @media screen and (max-width: 650px ) {
+        @content;
+    }
+}
+
+@mixin mobileSmall {
+    @media screen and (max-width: 350px ) {
+        @content;
+    }
+}

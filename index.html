@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./build/css/main.css">
+        <title>Form</title>
+    </head>
+    <body>
+        <div class="form">
+            <div class="form__header">
+                <h1 class="header">Create Account</h1>
+            </div>
+                <form class="form__main" id="form__main" action="./" method="GET">
+                    <div class="form__name">
+                        <div class="form__firstname">
+                            <label for="firstname">First Name*</label>
+                            <input
+                                type="text"
+                                id="firstname"
+                                placeholder="enter your first name"
+                                
+                            />
+                        </div>
+                        <div class="name__lastname">
+                            <label for="lastname">Last Name</label>
+                            <input
+                                type="text"
+                                id="lastname"
+                                placeholder="enter your last name"
+                            />
+                        </div>
+                    </div>
+                    <div class="form__email">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" placeholder="enter your email"/>
+                    </div>
+                    <div class="form__password">
+                        <div class="password">
+                            <label for="password">Password*</label>
+                            <input type="password" id="password" placeholder="enter your password" />
+                        </div>
+                        <div class="password__repeat">
+                            <label for="password__repeat">Repeat Password*</label>
+                            <input type="password" id="password__repeat" placeholder="enter your password again" >
+                        </div>
+                    </div>
+                    <div class="form__gender-hobbies_cont">
+                        <div class="form__gender">
+                            <p class="form__gender_header">Gender</p>
+                            <input type="radio" name="gender" value="male"/>
+                            <label for="gender">Male</label>
+                            <input type="radio" name="gender" value="female"/>
+                            <label for="gender">Female</label>
+                        </div>
+                        <div class="form__hobbies">
+                            <p class="form__hobbies_header">Hobbies</p>
+                            <input type="checkbox" name="music" id="music" />
+                            <label for="music">Music</label>
+                            <input type="checkbox" name="sports" id="sports" />
+                            <label for="sports">Sports</label>
+                            <input type="checkbox" name="travel" id="travel" />
+                            <label for="travel">Travel</label>
+                            <input type="checkbox" name="movies" id="movies" />
+                            <label for="movies">Movies</label>
+                        </div>
+                    </div>
+                    <div class="form__income">
+                        <div class="income__status">
+                            <label for="income">Source of Income</label>
+                            <select name="income" id="income">
+                                <option value="employed" selected>Employed</option>
+                                <option value="unemployed">Unemployed</option>
+                                <option value="freelancer">Freelancer</option>
+                                <option value="passive">Passive Income</option>
+                            </select>
+                        </div>
+                        <div class="income_range">
+                            <label for="income_range">Income</label>
+                            <div class="income__range_value">
+                                <input id="range" type="range" max="20" step="1" value="10">
+                                <div class="income__value">
+                                    <span id="income__value_text">10K</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__picture-age_cont">
+                        <div class="form__profile-picture">
+                            <label for="profile_picture">Upload Profile Picture</label>
+                            <input type="file" id="profile_picture">
+                        </div>
+                        <div class="form__age">
+                            <label for="age">Age</label>
+                            <input type="number" id="age" placeholder="enter your age">
+                        </div>
+                    </div>
+                    <div class="form__bio">
+                        <label for="bio">Bio</label>
+                        <textarea width="100%" height="10%">
+                        </textarea>
+                    </div>
+                </form>
+                <div class="form__submit">
+                    <button  id="submit__button" form="form__main" type="submit">Create</button>
+                </div>
+        </div>  
+        <script type="module" src="./build/js/index.js"></script>
+    </body>
+</html>
